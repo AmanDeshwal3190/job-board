@@ -20,8 +20,9 @@ const Home = () => {
         }
     };
 
-    useEffect(() => {
+   useEffect(() => {
         fetchJobs();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search, type]);
 
     return (
