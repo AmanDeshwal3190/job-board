@@ -23,7 +23,7 @@ const PostJob = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/jobs', form, {
+            await axios.post('https://job-board-backend-pm5j.onrender.com/api/jobs', form, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             navigate('/');

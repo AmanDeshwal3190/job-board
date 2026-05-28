@@ -15,7 +15,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password, role });
+            const { data } = await axios.post('https://job-board-backend-pm5j.onrender.com/api/auth/register', { name, email, password, role });
             login(data);
             navigate('/');
         } catch (err) {

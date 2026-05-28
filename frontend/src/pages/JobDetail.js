@@ -13,7 +13,7 @@ const JobDetail = () => {
     useEffect(() => {
         const fetchJob = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5000/api/jobs/${id}`);
+                const { data } = await axios.get(`https://job-board-backend-pm5j.onrender.com/api/jobs/${id}`);
                 setJob(data);
             } catch (error) {
                 console.error(error);
@@ -26,7 +26,7 @@ const JobDetail = () => {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`http://localhost:5000/api/jobs/${id}`, {
+            await axios.delete(`https://job-board-backend-pm5j.onrender.com/api/jobs/${id}`, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             navigate('/');

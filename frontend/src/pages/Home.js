@@ -11,7 +11,7 @@ const Home = () => {
     const fetchJobs = async () => {
         try {
             setLoading(true);
-            const { data } = await axios.get(`http://localhost:5000/api/jobs?search=${search}&type=${type}`);
+            const { data } = await axios.get(`https://job-board-backend-pm5j.onrender.com/api/jobs?search=${search}&type=${type}`);
             setJobs(data);
         } catch (error) {
             console.error(error);
